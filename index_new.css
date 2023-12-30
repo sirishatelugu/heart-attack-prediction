@@ -1,0 +1,126 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+
+.bg-container{
+	height: 100vh;
+	background: url('https://tse1.mm.bing.net/th?id=OIP.GI1p1vXgE57vSxAQjMLPtwHaE9&pid=Api&P=0&h=180');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+@media(orientation:portrait) and (max-width:700px){
+	.bg-container{
+		background:url('https://media.tenor.com/GcVqFzcF46sAAAAC/aesthetic-wallpaper.gif');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo{
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.logo:hover{
+	font-size: 35px;
+	color: #222;
+}
+
+header ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header ul li{
+	list-style: none;
+	margin-left: 20px;
+	text-decoration: none;
+}
+
+header ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 6px 15px;
+}
+
+header ul li a:hover,
+header ul li a.active{
+	background: #fff;
+	color: #222;
+	border-radius: 12px;
+}
+
+.layer-container{
+	width: 100%;
+	height: 100vh;
+	background: rgba(86, 86, 86, 0.1);
+	backdrop-filter: blur(5px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.main-heading{
+	font-size: 3rem;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-family: revert-layer;
+	letter-spacing: 2px;
+	color: #222;
+}
+
+.heading{
+	text-transform: capitalize;
+	font-family: cursive;
+	color: #222;
+}
+
+.join-btn{
+	width: 100px;
+	height: 40px;
+	border-width: 0px;
+	border-radius: 30px;
+	background: #fff;
+	background-position: center;
+	color: #222;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+.join-btn:hover{
+	float: right;
+	width: 200px;
+	box-shadow: 4px 8px black;
+	font-family: algerian, courier;
+	line-height: 80%;
+}
+
+

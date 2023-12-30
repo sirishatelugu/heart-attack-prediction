@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://tse3.explicit.bing.net/th?id=OIP.2EpzU6CIx-krAkTuZKwaQwHaJG&pid=Api&P=0&h=180 ">
+    <title>HeartAttack</title>
+
+</head>
+
+<body>
+	<div class="sign">
+		<h2 style="color:red;">To predict Chance Of HeartAttack Fill the below details</h2>
+    		<form class="app" method="POST" action="/predict">
+			<center>
+        			<div id="final_price">
+           				Result:  {{ OUTPUT }}
+				</div>
+			</center>
+        		<div class="table">
+
+				<div class="wrap">
+                			<div class="col">Age
+                		</div>
+                		<div class="value">
+                    			<input type="text" name="age" required="required">
+				</div>
+            		</div>
+
+            			<div class="wrap">
+                			<div class="col">Gender</div>
+                			<div class="value">
+                    				<select name="Gender" id="Gender">
+                        				<option value="Female">Female</option>
+                        				<option value="Male">Male</option>
+                    				</select>
+                			</div>
+            			</div>
+	
+				<div class="wrap">
+                			<div class="col">Chest Pain</div>
+					<div class="value">
+						<select name="cp" id="cp">
+                        				<option value="typical angina">Typical Angina</option>
+                        				<option value="atypical angina">Atypical Angina</option>
+                        				<option value="non-anginal pain">Non-Anginal Pain</option>
+                        				<option value="asymptomatic">Asymptomatic</option>
+                    				</select>
+					</div>
+            			</div>
+
+				<div class="wrap">
+                			<div class="col">Resting Blood Pressure</div>
+                			<div class="value">
+                    				<input type="text" name="trtbps" required="required">
+                			</div>
+            			</div>
+
+				<div class="wrap">
+                			<div class="col">Cholestoral im mg/dl fetched via BMI sensor</div>
+                			<div class="value">
+                    				<input type="text" name="chol" required="required">
+					</div>
+            			</div>
+
+				<div class="wrap">
+                			<div class="col">Fasting Blood sugar > 120 mg/dl</div>
+                			<div class="value">
+                    				<select name="fbs" id="fbs">
+                        				<option value="True">True</option>
+                        				<option value="False">False</option>
+                    				</select>
+                			</div>
+            			</div>
+
+				<div class="wrap">
+                			<div class="col">Resting Electrocardiographic Result</div>
+                			<div class="value">
+                    				<select name="restecg" id="restecg">
+                        				<option value="normal">Normal</option>
+                        				<option value="abnormal">Having ST-T wave abnormality</option>
+							<option value="definite">Showing probable or definite left ventricular hypertrophy by Estes criteria</option>
+                    				</select>
+                			</div>
+            			</div>
+
+				<div class="wrap">
+                			<div class="col">Maximum Heart Rate Achieved</div>
+                			<div class="value">
+						<input type="text" name="thalachh" required="required">
+                			</div>
+            			</div>
+
+				<div class="wrap">
+                			<div class="col">Exercise Indice Angina</div>
+                			<div class="value">
+            					<select name="exng" id="exng">
+                        				<option value="Yes">Yes</option>
+                        				<option value="No">No</option>
+                    				</select>
+                			</div>
+            			</div>
+
+				<div class="wrap">
+                			<div class="col">ST Depression Induced By Exercise Relative To Rest</div>
+                			<div class="value">
+                    				<input type="text" name="oldpeak" required="required">	
+					</div>
+            			</div>
+
+				<div class="wrap">
+                			<div class="col">The Slope Of The Peak Exercise ST Segment</div>
+                			<div class="value">
+                    				<input type="text" name="slp" required="required">
+                			</div>
+            			</div>
+
+				<div class="wrap">
+                			<div class="col">No.Of Major Vessels(0-3)</div>
+                			<div class="value">
+                    				<input type="text" name="caa" required="required">
+					</div>
+            			</div>
+
+				<div class="wrap">
+                			<div class="col">thalassemia</div>
+                			<div class="value">
+                  				<select name="thall" id="thall">
+                        				<option value="normal">Normal</option>
+                        				<option value="fixed">Fixed Defect</option>
+							<option value="reversal">Reversal Defects</option>
+                    				</select>
+                			</div>
+         			</div>
+
+        		</div>
+        		<center><button class="submitBtn" type="submit">Submit </button></center>
+		</form>
+	</div>
+</body>
+
+
+<style>
+    
+
+ 
+    .table {
+        backdrop-filter: blur(4px);
+        padding: 2em 1em;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        width: 80vw;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        position: relative;
+        top: 10vw;
+    }
+
+    .wrap {
+        margin: 0.5em;
+        width: calc(33.33% - 2em);
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+	padding-top:20px;
+	
+    }
+
+    .wrap .col {
+        text-align: center;
+        font-size: 1em;
+        padding-bottom: 0.5em;
+        color: black;
+	font-weight:bold;
+        text-transform: uppercase;
+        word-wrap: break-word;
+
+    }
+
+    .value input,
+    .value select {
+        width: 100%;
+        font-size: 1.2em;
+        border: none;
+        backdrop-filter: blur(4px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        background: none;
+        color: black;
+        padding: 0.25em 0.5em;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+    }
+
+    .value select option {
+        background: rgba(0, 0, 0, 0.3);
+        color: whitesmoke;
+    }
+
+    .submitBtn {
+        position: relative;
+        top: 10vw;
+        margin-top: 1em;
+        background: rgba(125, 125, 125, 0.3);
+        color: black;
+        padding: 0.5em 2em;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        border: none;
+	margin-bottom:50px;
+
+    }
+    .submitBtn:hover{
+	
+	border-radius:50%;
+	color:black;
+	
+   }
+
+    #final_price {
+        color:red;
+        font-size:x-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border: solid;
+        border-radius: 10px;
+        width:230px;
+        height: 90px;
+        text-align: left;
+        padding: 12px;
+        background-color: black;
+.app{
+	background-color:#dc34f7;
+}
+        
+
+    }
+body{
+	background:linear-gradient(to right, gold, aqua);
+	background-size: cover;
+	background-blend-mode: overlay;
+}
+.sign{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+</style>
+
+</html>
